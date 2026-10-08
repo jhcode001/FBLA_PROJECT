@@ -1,4 +1,4 @@
-// import Konva from 'konva';
+// iport Konva from 'konva';
 
 /* const container = document.getElementById("mainBody");
 
