@@ -47,3 +47,31 @@ html=`
         <button id="LoadSaves" class="Load-gamesaves-btn">Load Saves</button>`;
 
 container.innerHTML += html; */
+
+let button = document.getElementById("startGame");
+let bg = document.getElementById("bgthing");
+
+button.addEventListener("click", function(){
+
+  bg.style = "background: black; width: 1000rem; height: 100dvh; position: absolute; z-index: 100; align-self: center";
+
+  bg.animate([
+    {opacity: 0},
+    {opacity: 0.2},
+    {opacity: 0.4},
+    {opacity: 0.6},
+    {opacity: 0.8},
+    {opacity: 1},
+  ],
+  {
+    duration: 2000,
+    iterations: 1,
+    easing: 'ease-in-out'
+  }
+
+  );
+
+  document.getElementById("mainBody")
+
+});
+
