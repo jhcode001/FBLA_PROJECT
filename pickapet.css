@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #d8e5ed;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #26343d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+#pageTitle {
+    font-size: 35px;
+
+    margin-bottom: 50px;
+
+    color: #344b57;
+
+    letter-spacing: 4px;
+}
+
+#gameOptions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+}
+
+.game-option {
+    width: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.game-option h2 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+}
+
+.career-title {
+    color: #344b57;
+}
+
+.money-title {
+    color: #344b57;
+}
+
+.life-title {
+    color: #344b57;
+}
+
+
+/* SQUARES */
+
+.game-icon {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    border: 3px solid;
+}
+
+.career-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.money-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.life-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.game-option button {
+    width: 200px;
+
+    height: 55px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    color: #344b57;
+
+    border: 2px solid;
+}
+
+.career-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
+
+.money-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
+
+.life-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
