@@ -233,3 +233,8 @@ body {
     transform: translateY(-15px);
   }
 }
+
+#bgthing{
+  
+  z-index: 100;
+}

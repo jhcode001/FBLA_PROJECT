@@ -47,7 +47,3 @@ html=`
         <button id="LoadSaves" class="Load-gamesaves-btn">Load Saves</button>`;
 
 container.innerHTML += html; */
-
-function startGame() {
-    window.location.href = "pickapet.html";
-}
