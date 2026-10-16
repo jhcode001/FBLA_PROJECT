@@ -50,6 +50,7 @@ container.innerHTML += html; */
 
 let button = document.getElementById("startGame");
 let bg = document.getElementById("bgthing");
+let bg2 = document.getElementById("bgthing");
 
 button.addEventListener("click", function(){
 
@@ -71,6 +72,8 @@ button.addEventListener("click", function(){
 
   );
 
-  document.getElementById("mainBody")
+  setTimeout(() => {
+    window.location.href = "pickapet.html";
+  }, 3000)
 
 });
