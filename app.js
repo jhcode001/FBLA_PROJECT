@@ -1,79 +1,104 @@
-// iport Konva from 'konva';
+const firsthtml = `<header id="headerthing">
+    <div class="left-side-nav">
+        <img id="GameLogoImg"/>
+    </div>
+    <div class="right-side-nav"></div>
+</header>
 
-/* const container = document.getElementById("mainBody");
+<div id="bgthing"></div>
 
-const stage = new Konva.Stage({
-  container: 'mainBody',
-  width: container.clientWidth,
-  height: container.clientHeight,
-});
+<div id="mainBody">
+    <h1 id="title">GET A J*B <span id="deluxe">(deluxe edition)</span></h1>
+    <button id="startGame" class="start-game-btn">Start Game</button>
+    <button id="LoadSaves" class="Load-gamesaves-btn">Load Saves</button>
+</div>
 
-const layer = new Konva.Layer();
+<footer id="footerthing"></footer>`;
 
-stage.add(layer);
+const secondadditionaryhtml = `<div id="bgthing"></div>
+<br>
+<h1 id="pageTitle">Pick Your Pet</h1>
 
-let circleProperties = {
-  x: 400,
-  y: 300,
-  radius: 50,
-  fill: 'red',
-  draggable: true
+<div id="gameOptions">
+    <div class="game-option">
+        <h2 class="career-title">Mochi ❤️</h2>
+        <div class="game-icon career-icon">
+            <img src="assets/icons/tuxedoCat.png" alt="Tuxedo Cat">
+        </div>
+        <button class="career-button">SELECT</button>
+    </div>
+
+    <div class="game-option">
+        <h2 class="money-title">Nyan 🐈</h2>
+        <div class="game-icon money-icon">
+            <img src="assets/icons/calicoCat.png" alt="Calico Cat">
+        </div>
+        <button class="money-button">SELECT</button>
+    </div>
+
+    <div class="game-option">
+        <h2 class="life-title">Evil Cat 🗑️</h2>
+        <div class="game-icon life-icon">
+            <img src="assets/icons/orangeCat.png" alt="Orange Cat">
+        </div>
+        <button class="life-button">SELECT</button>
+    </div>
+</div>`;
+
+async function startup() {
+    document.body.innerHTML = secondadditionaryhtml;
+    
+    const newBg = document.getElementById("bgthing");
+
+    await newBg.animate(
+        [
+            { opacity: 1 },
+            { opacity: 0.8 },
+            { opacity: 0.6 },
+            { opacity: 0.4 },
+            { opacity: 0.2 },
+            { opacity: 0 }
+        ],
+        {
+            duration: 2000,
+            iterations: 1,
+            easing: "ease-in-out",
+            fill: "forwards"
+        }
+    );
 }
 
-const circle = new Konva.Circle(circleProperties);
+async function startGame() {
+    const bg = document.getElementById("bgthing");
 
-const imageObj = new Image();
-imageObj.onload = function () {
-  const thing = new Konva.Image({
-    x:500,
-    y:500,
-    image: imageObj,
-    width: 1469,
-    height: 1008,
-    z: 1,
+    bg.style.cssText = `
+        background: black;
+        width: 100%;
+        height: 100dvh;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        opacity: 0;
+    `;
 
-  });
+    await bg.animate(
+        [
+            { opacity: 0 },
+            { opacity: 0.2 },
+            { opacity: 0.4 },
+            { opacity: 0.6 },
+            { opacity: 0.8 },
+            { opacity: 1 }
+        ],
+        {
+            duration: 1000,
+            iterations: 1,
+            easing: "ease-in-out",
+            fill: "forwards"
+        }
+    ).finished;
 
-    layer.add(thing);
-};
+    await startup();
+}
 
-imageObj.src = '..//assets/images/starting-page.jpg';
-layer.add(circle);
-
-let html = ``;
-
-html=`
-        <button id="startGame" class="start-game-btn">Start Game</button>
-        <button id="LoadSaves" class="Load-gamesaves-btn">Load Saves</button>`;
-
-container.innerHTML += html; */
-
-let button = document.getElementById("startGame");
-let bg = document.getElementById("bgthing");
-let bg2 = document.getElementById("bgthing");
-
-button.addEventListener("click", function(){
-
-  bg.style = "background: black; width: 1000rem; height: 100dvh; position: absolute; z-index: 100; align-self: center";
-
-  bg.animate([
-    {opacity: 0},
-    {opacity: 0.2},
-    {opacity: 0.4},
-    {opacity: 0.6},
-    {opacity: 0.8},
-    {opacity: 1},
-  ],
-  {
-    duration: 2000,
-    iterations: 1,
-    easing: 'ease-in-out'
-  }
-
-  );
-
-  setTimeout(() => {
-    window.location.href = "pickapet.html";
-  }, 3000)
-
-});
+document.getElementById("startGame").addEventListener("click", startGame);

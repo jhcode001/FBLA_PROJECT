@@ -168,10 +168,146 @@ body {
 } 
 
 #bgthing { 
-  z-index: 100; 
+    background: black;
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
 } 
 
 @keyframes smoothFloat { 
   0% { transform: translateY(0px); } 
   100% { transform: translateY(-15px); } 
+}
+
+#pageTitle {
+    font-size: 35px;
+    font-family: "VT323", monospace;
+    margin-bottom: 50px;
+
+    color: #344b57;
+
+    letter-spacing: 4px;
+    align-self: center;
+}
+
+#gameOptions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+}
+
+.game-option {
+    width: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.game-option h2 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+}
+
+.career-title {
+    color: #344b57;
+    font-family: "VT323", monospace;
+}
+
+.money-title {
+    color: #344b57;
+    font-family: "VT323", monospace;
+}
+
+.life-title {
+    color: #344b57;
+    font-family: "VT323", monospace;
+}
+
+
+/* SQUARES */
+
+.game-icon {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    border: 3px solid;
+}
+
+.career-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.money-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.life-icon {
+    background-color: #dceaf1;
+    border-color: #a9c7d6;
+}
+
+.game-option button {
+    width: 200px;
+
+    height: 55px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    color: #344b57;
+
+    border: 2px solid;
+    font-family: "VT323", monospace;
+}
+
+.career-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
+
+.money-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
+
+.life-button {
+    background-color: #b8d1dc;
+
+    border-color: #82afc3;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
